@@ -31,8 +31,9 @@ public class Polynomial{
 	public double evaluate(double X){
 		int n = C.length;
 		double answer = 0;
-		for(int i=0; i<n; i++){
-			answer = answer + Math.pow(X, n-1);
+		answer = C[0];
+		for(int i=1; i<n; i++){
+			answer = answer + C[i] * Math.pow(X, i);
 		}
 		return answer;
 	}
